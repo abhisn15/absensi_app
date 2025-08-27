@@ -58,11 +58,10 @@ class _RiwayatScreenState extends State<RiwayatScreen> {
   void _showFilterDialog() {
     final currentDate = DateTime.now();
     final months = _getMonths();
-    months.insert(0, "Semua"); // Tambahkan opsi "Semua"
+    months.insert(0, "Semua");
 
-    // Generate years list (5 years back and current year)
     final years = List<int>.generate(6, (i) => currentDate.year - (5 - i));
-    years.add(currentDate.year + 1); // Add next year
+    years.add(currentDate.year + 1);
 
     showDialog(
       context: context,

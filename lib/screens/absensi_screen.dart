@@ -36,7 +36,7 @@ class _AbsensiScreenState extends State<AbsensiScreen>
   final double _officeLng = 106.816666;
   final double _radius = 100.0;
 
-  // Animation controllers
+  // animasi controllers
   late AnimationController _locationController;
   late Animation<double> _locationScaleAnimation;
   late AnimationController _contentController;
