@@ -420,14 +420,14 @@ a. awal mula dan rute request
 - mulai: kalau pengguna masuk ke URL kayak http://domain/product/brand (atau /product/Brand/index), CodeIgniter akan arahkan ke controller Brand (di folder application/controllers/product/Brand.php).
 - ini karena CodeIgniter baca URL dalam segmen: product sebagai subfolder, Brand sebagai nama controller, dan index sebagai method default kalau nggak ada yang spesifik.
 - konstruktor (__construct()):
-- panggil parent::__construct() untuk ambil fungsi dari My_Controller (yang kemungkinan udah punya fitur umum kayak cek login atau logging).
-- muat model Auth_model buat autentikasi (mungkin buat cek apakah pengguna udah login).
-- buat judul halaman dinamis berdasarkan nama controller ($this->name kayaknya di-set di My_Controller jadi 'brand').
-- muat model utama Brand_model dengan alias $this->name (yaitu 'brand').
-- muat helper master_helper buat fungsi tambahan (misalnya buat form atau validasi).
+	- panggil parent::__construct() untuk ambil fungsi dari My_Controller (yang kemungkinan udah punya fitur umum kayak cek login atau logging).
+	- muat model Auth_model buat autentikasi (mungkin buat cek apakah pengguna udah login).
+	- buat judul halaman dinamis berdasarkan nama controller ($this->name kayaknya di-set di My_Controller jadi 'brand').
+	- muat model utama Brand_model dengan alias $this->name (yaitu 'brand').
+	- muat helper master_helper buat fungsi tambahan (misalnya buat form atau validasi).
 - tujuannya: semua ini bikin persiapan awal biar semua yang dibutuhkan udah siap sebelum masuk ke fungsi lain, jadi nggak perlu nulis ulang kode di setiap controller.
 
-b. Fungsi index(): tampilkan halaman utama
+b. fungsi index(): tampilkan halaman utama
 - jalan kalau pengguna buka /product/Brand atau /product/Brand/index.
 - tambah file CSS dan JS buat DataTables (plugin buat tabel interaktif) dan form.
 - add_style() dan add_script() kayaknya fungsi dari My_Controller buat masukin aset ke view.
